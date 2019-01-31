@@ -1,5 +1,6 @@
 // C++ is an object oriented programming language
     // Encapsulation, Polymorphism, Inheritance
+	// short circuit programming language: boolean checking with logical operators
 
 // Every program starts with
     // #include <iostream>
@@ -9,8 +10,8 @@
     auto x = expression;
     decltype(x*3.5) y;
 
-// Data types
-    int _int = 10;
+// Data types - initialized in the RAM
+    int _int = 10; // 2 or 4 bytes
     long _long = 9999999999;
     float _float = 10.983;
     double _double = 123.45678;
@@ -53,7 +54,7 @@
 	// is equal == different than single = assignment
 
 
-	// greater than, equal to etc. > < >= <=
+	// Comparison Operator: greater than, equal to etc. > < >= <=
 	// logical operators have lowest priority
 
 // Strong enums and enum classes
@@ -88,4 +89,45 @@
 		break;
 	default:
 		cout << "Not a valid number";
+	}
+
+// While loop
+	int i = 0; 
+	while (/* boolean statement */ i < 10) {
+		cout << i << endl; 
+
+		//increment 
+		i++; 
+	}
+
+// For loop
+	// for (initialization statement; boolean statement; controlling statement)
+	for (int i = 0; i < 10; i++) {
+
+	}
+
+// Do-While loop 
+	do {
+
+	} while (/* boolean expression */); 
+
+// Continue vs Break
+	// Break: leave the current loop at the point of break
+	// Continue: leaves the current iteration of the loop
+
+// Reading and printing from file
+	// #include <fstream>
+	// #include <string>
+
+	int i = 0, id; 
+	string fName, lName; 
+
+	ifstream f; 
+	ofstream fout("results.txt");
+	
+	f.open("data.txt");
+
+	while (f.eof()) { // .eof() - end of file. Predefined C++ function 
+		f >> fName >> lName >> id;
+		fout << fName << lName << id;
 	}
