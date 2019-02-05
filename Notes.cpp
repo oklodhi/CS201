@@ -131,3 +131,12 @@
 		f >> fName >> lName >> id;
 		fout << fName << lName << id;
 	}
+
+// Functions
+	// A set of reusable code
+	// Procedures, subprograms, methods, functions
+
+	// I-P-O
+	// input , process , output 
+
+	//void: functions that dont output anything
