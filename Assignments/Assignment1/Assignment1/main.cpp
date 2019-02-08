@@ -8,40 +8,41 @@
 // variable initialization
 int userChoice;
 bool quit = false;
-char inputAnotherTrans; 
-double pointsAssignments, pointsExam1, pointsExam2, pointsFinalExam, pointsTotalGrade; 
+char inputAnotherTrans;
+double pointsAssignments, pointsExam1, pointsExam2, pointsFinalExam, pointsTotalGrade;
 
 int main() {
 	// as long as quit != true then keep looping menu
 	while (quit != true && (userChoice != 1 || userChoice != 2 || userChoice != 3)) {
 		std::cout << "Welcome to the Grade system" << std::endl << "How can we help you today?" << std::endl;
 		std::cout << "1. Grade Scale." << std::endl << "2. Calculate your total % and Grade." << std::endl << "3. Exit" << std::endl;
-		std::cout << "Enter your choice: " << std::endl; 
+		std::cout << "Enter your choice: " << std::endl;
 
 		// input userChoice for menu
 		// switch case based on userChoice
 		std::cin >> userChoice;
-		
+
 		switch (userChoice) {
 		case 1:
 			// display grading scale menu
 			std::cout << "A: 90-100 \nB: 80-89 \nC: 69-79 \nD: 60-68 \nF: 0-59" << std::endl;
-			
+
 			// loop again or quit based on input
-			std::cout << "Do you want to have another transaction?" << std::endl; 
+			std::cout << "Do you want to have another transaction?" << std::endl;
 			std::cin >> inputAnotherTrans;
+			inputAnotherTrans = toupper(inputAnotherTrans);
 
 			// check if lowercase == uppercase 
-			if (toupper(inputAnotherTrans) == 'Y') {
-				main(); 
+			if (inputAnotherTrans == 'Y') {
+				main();
 			}
-			else if (toupper(inputAnotherTrans) == 'N') {
+			else if (inputAnotherTrans == 'N') {
 				quit = true;
 			}
 			else {
 				std::cin >> inputAnotherTrans;
 			}
-			break; 
+			break;
 		case 2:
 			// diplay grade calculation menu
 			std::cout << "Please enter your points in assignments, Exam1, Exam2, and Final Exam" << std::endl;
@@ -53,16 +54,16 @@ int main() {
 			std::cin >> pointsExam1;
 			std::cout << "Final Exam out of 100:" << std::endl;
 			std::cin >> pointsFinalExam;
-			 
+
 			// calculate total grade based on points recieved 
-			pointsTotalGrade = ((pointsAssignments + pointsExam1 + pointsExam2 + pointsFinalExam) / (80 + 80 + 80 + 100)) * 100; 
+			pointsTotalGrade = ((pointsAssignments + pointsExam1 + pointsExam2 + pointsFinalExam) / (80 + 80 + 80 + 100)) * 100;
 
 			// output total grade as a letter grade
 			std::cout << "Your total grade percentage is " + std::to_string(pointsTotalGrade) << std::endl << "Depending on your Grade scale, your Grade is" << std::endl;
 
 			if (pointsTotalGrade >= 90) {
-				std::cout << "A" << std::endl; 
-			} 
+				std::cout << "A" << std::endl;
+			}
 			else if (pointsTotalGrade >= 80) {
 				std::cout << "B" << std::endl;
 			}
@@ -73,18 +74,19 @@ int main() {
 				std::cout << "D" << std::endl;
 			}
 			else {
-				std::cout << "F" << std::endl; 
+				std::cout << "F" << std::endl;
 			}
 
 			// loop or quit again based on input
 			std::cout << "Do you want to have another transaction?" << std::endl;
 			std::cin >> inputAnotherTrans;
+			inputAnotherTrans = toupper(inputAnotherTrans);
 
 			// check lowercase == uppercase
-			if (toupper(inputAnotherTrans) == 'Y') {
+			if (inputAnotherTrans == 'Y') {
 				main();
 			}
-			else if (toupper(inputAnotherTrans) == 'N') {
+			else if (inputAnotherTrans == 'N') {
 				quit = true;
 			}
 			else {
@@ -100,7 +102,7 @@ int main() {
 			main();
 		}
 	}
-	
-	std::cout << std::endl; 
-	return 0; 
+
+	std::cout << std::endl;
+	return 0;
 }
