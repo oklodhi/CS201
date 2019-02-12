@@ -139,4 +139,21 @@
 	// I-P-O
 	// input , process , output 
 
-	//void: functions that dont output anything
+	// void: functions that dont output anything
+	// data type: the type of the return statement
+
+	// Parameter goes in the function definition\
+	// Arguements are what we pass into the function
+
+	//default parameter: 
+	void func(int a, int b = 5) {
+		a + b; 
+	} // B has been given a default value, but no default on A
+
+// Arrays
+	// Arrays are a collection of data of same data type
+	// Array values / elements
+	// Array indexing starting from 0
+
+	// & referrence / address of operator 
+	// * value / pointer operator 
