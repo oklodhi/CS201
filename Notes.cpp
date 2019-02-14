@@ -154,6 +154,46 @@
 	// Arrays are a collection of data of same data type
 	// Array values / elements
 	// Array indexing starting from 0
+	// array[]
 
 	// & referrence / address of operator 
 	// * value / pointer operator 
+
+	// Loops are used to do any iteration through an array
+
+// Multidimentional arrays
+	// array[][]
+
+// Sorting Algorithms and time complexity
+	// worst - O(n)
+	// best - omega(1)
+	// avg - theta(n)
+
+	// Binary search: used in a sorted list, starts from the middle
+	// log (n)
+	const int size = 3;
+	int arr1[size] = { 3, 4, 5 }; 
+	int target = 7; 
+
+	binary_search(arr1, 0, size, target);
+
+	binary_search(int arr[], int left, int right, int target, int mid) {
+		while (left <= right) {
+			mid = left + (right - left) / 2; 
+
+			if (arr[mid] = target) {
+				return mid;
+			}
+
+			if (target < arr[mid]) {
+				right = mid - 1; 
+			}
+			else {
+				left = mid + 1; 
+			}
+		}
+		return -1; 
+	}
+
+	// Selection sort: selecting the index and checking minimum, then swapping
+	// O(n^2)
