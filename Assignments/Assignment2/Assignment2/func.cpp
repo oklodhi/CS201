@@ -45,11 +45,8 @@ void mainMenu() {
 			printTotal(ID, savingsAcc, checkingAcc, arrSize);
 			break;
 		case '4':
-			std::cout << "Option #4" << std::endl;
-			quit = true;
-			break;
 		case 'Q':
-			std::cout << "Option Q" << std::endl;
+			std::cout << "\nThanks for using my program. Goodbye!" << std::endl;
 			quit = true;
 			break;
 		}
