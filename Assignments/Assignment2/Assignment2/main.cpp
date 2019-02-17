@@ -7,5 +7,7 @@ Assignment 2 */
 #include "func.h"
 
 int main() {
+
 	mainMenu();
+
 }
