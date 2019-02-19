@@ -169,7 +169,10 @@
 	// best - omega(1)
 	// avg - theta(n)
 
-	// Binary search: used in a sorted list, starts from the middle
+	// multidimentional array complexity: n*m*k where n, m, and k are array dimensions
+
+	// Binary search: used in a sorted list, starts from the middle 
+	// IMPORTANT 
 	// log (n)
 	const int size = 3;
 	int arr1[size] = { 3, 4, 5 }; 
@@ -197,3 +200,31 @@
 
 	// Selection sort: selecting the index and checking minimum, then swapping
 	// O(n^2)
+	void selectionSort(int a[], int numberUsed) {
+		int indexOfNextSmallest;
+		for (int index = 0; index < numberUsed - 1; index++) {
+			indexOfSmallest;
+		}
+	}
+
+	// Insertion sort: 
+
+	// Merge sort: 
+	// uses recursion: when the function calls itself or we do the same thing again and again
+	// Time complexity: n*log(n)
+
+	// Quick sort: 
+
+	// Vectors
+	// similar to arrays
+#include <vector>
+
+	std::vector<int> v; 
+	v.push_back(/* data here */); // appends values to the end of the vector
+	v.size(); // returns the size of vector
+	v.capacity(); // returns capacity (how many items the vector can hold)
+	v.reserve(/* value here */) // sets capacity to 32
+
+	for (unsined int i = 0; i < v.size(); i++) {
+
+	}
