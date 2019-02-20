@@ -165,6 +165,7 @@
 	// array[][]
 
 // Sorting Algorithms and time complexity
+	// Big O Notation: the way we talk about how long it takes an algorithm to run
 	// worst - O(n)
 	// best - omega(1)
 	// avg - theta(n)
