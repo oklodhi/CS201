@@ -172,20 +172,20 @@
 
 	// multidimentional array complexity: n*m*k where n, m, and k are array dimensions
 
-	// Binary search: used in a sorted list, starts from the middle 
+	// Binary search: only works in a sorted list, starts from the middle
 	// IMPORTANT 
 	// log (n)
 	const int size = 3;
 	int arr1[size] = { 3, 4, 5 }; 
 	int target = 7; 
 
-	binary_search(arr1, 0, size, target);
+	binary_search(arr1, 0, size, target, arr[size/2]);
 
 	binary_search(int arr[], int left, int right, int target, int mid) {
 		while (left <= right) {
 			mid = left + (right - left) / 2; 
 
-			if (arr[mid] = target) {
+			if (arr[mid] == target) {
 				return mid;
 			}
 
