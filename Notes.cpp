@@ -172,7 +172,7 @@
 
 	// multidimentional array complexity: n*m*k where n, m, and k are array dimensions
 
-	// Binary search: only works in a sorted list, starts from the middle
+	// *** Binary search: only works in a sorted list, starts from the middle
 	// IMPORTANT 
 	// log (n)
 	const int size = 3;
@@ -199,7 +199,7 @@
 		return -1; 
 	}
 
-	// Selection sort: selecting the index and checking minimum, then swapping
+	// *** Selection sort: selecting the index and checking minimum, then swapping
 	// O(n^2)
 	void selectionSort(int a[], int numberUsed) {
 		int indexOfNextSmallest;
@@ -210,7 +210,7 @@
 
 	// Insertion sort: 
 
-	// Merge sort: 
+	// *** Merge sort: 
 	// uses recursion: when the function calls itself or we do the same thing again and again
 	// Time complexity: n*log(n)
 
