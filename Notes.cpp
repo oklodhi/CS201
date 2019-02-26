@@ -172,6 +172,8 @@
 
 	// multidimentional array complexity: n*m*k where n, m, and k are array dimensions
 
+	// Linear search: goes through a list, index by index, searching for target
+
 	// *** Binary search: only works in a sorted list, starts from the middle
 	// IMPORTANT 
 	// log (n)
