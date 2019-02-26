@@ -216,7 +216,7 @@
 
 	// Quick sort: 
 
-	// Vectors
+// Vectors
 	// similar to arrays
 #include <vector>
 
@@ -227,5 +227,62 @@
 	v.reserve(/* value here */) // sets capacity to 32
 
 	for (unsined int i = 0; i < v.size(); i++) {
+
+	}
+
+// C-Strings
+	// was in C
+	// older way of handling strings, before the "string" library was coded
+	// each character in a string is stored in a CHAR array
+	// \0: null character, marks the end of the string\
+
+	// str
+
+
+	// delimiter for getline is \n
+
+#include <cctype>
+	// getline reads from cin, until it hits "?", and stores it in string line
+	std::string line; 
+	getline(cin, line, "?");
+
+	// cin gets 1 char and stores it in nextSymbol
+	char nextSymbol;
+	cin.get(nextSymbol);
+
+	// ignores 1000 characters of input until it hit new line \n
+	cin.ignore(1000, '\n');
+
+// Strings
+	std::string hello = "Hello";
+	std::string bye("bye");
+
+	// the following string comparison is done in ASCII
+	// Lexical order
+	hello > bye; 
+	
+
+// Running C++ on the terminal
+	// g++ [fileName.cpp]
+	// ./[outputName]
+
+// Exception Handling
+	// how to handle bad input 
+	try { // try block
+		// code here
+
+		// can have multiple if statements to check multiple exceptions
+		if (/*something happens here*/) {
+			throw code; // throw 'code' to the catch statement below because something went wrong
+		}
+	}
+	// the order of the catch statements matter. They get checked one-by-one
+	catch (int e) { // catch block which is expecting a int parameter that we "throw" from above
+		// code here
+	}
+	catch (std::string e) { // something went wrong with string
+
+	}
+	catch (...) { // something went wrong in general
 
 	}
