@@ -234,9 +234,10 @@
 
 // C-Strings
 	// was in C
+	// original type
 	// older way of handling strings, before the "string" library was coded
 	// each character in a string is stored in a CHAR array
-	// \0: null character, marks the end of the string\
+	// \0: null character, marks the end of the string
 
 	// str
 
@@ -256,12 +257,17 @@
 	cin.ignore(1000, '\n');
 
 // Strings
+	// Basically a template
+
 	std::string hello = "Hello";
 	std::string bye("bye");
 
 	// the following string comparison is done in ASCII
 	// Lexical order
 	hello > bye; 
+
+	sizeof(/*variable*/); // returned bytes in memory
+	strlen; // only returns size of string 
 	
 
 // Running C++ on the terminal
