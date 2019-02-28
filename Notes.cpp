@@ -12,10 +12,11 @@
 
 // Data types - initialized in the RAM
     int _int = 10; // 2 or 4 bytes
-    long _long = 9999999999;
+    long _long = 9999999999; // larger int
     float _float = 10.983;
-    double _double = 123.45678;
-    char _char = a;
+    double _double = 123.45678; // basically a larger float
+	unsigned int _unsigned = 2; // positive ints only 
+	char _char = a;
     bool _bool = true;
 
 // Escape Characters
@@ -212,7 +213,7 @@
 
 	// Insertion sort: 
 
-	// *** Merge sort: 
+	// Merge sort: 
 	// uses recursion: when the function calls itself or we do the same thing again and again
 	// Time complexity: n*log(n)
 
@@ -285,12 +286,25 @@
 		}
 	}
 	// the order of the catch statements matter. They get checked one-by-one
-	catch (int e) { // catch block which is expecting a int parameter that we "throw" from above
+	// catch block which is expecting a int parameter that we "throw" from above
+	catch (int e) { // something went wrong with an int
 		// code here
 	}
-	catch (std::string e) { // something went wrong with string
-
+	catch (std::string e) { // something went wrong with a string
+		throw something; // it is legal to re-throw insde catch block
 	}
 	catch (...) { // something went wrong in general
+		try {
+			// it is also legal to do another try-catch inside catch block
+		}
+		catch (int e) {
 
-	}
+		}
+	} // always start with a specific catch like "int" or "string" and then at the end use general "..."
+
+	// "exception specification" or "throw list"
+	int functionName (int param) throw (DivideByZero, someException); // exceptions DivideByZero and someException, all other invoke unexpected()
+
+	int functionName(int param) throw (); // all exceptions invoke unexpected()
+
+	int functionName(int param); // try catch handles inside function
