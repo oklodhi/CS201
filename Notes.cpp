@@ -12,10 +12,11 @@
 
 // Data types - initialized in the RAM
     int _int = 10; // 2 or 4 bytes
-    long _long = 9999999999;
+    long _long = 9999999999; // larger int
     float _float = 10.983;
-    double _double = 123.45678;
-    char _char = a;
+    double _double = 123.45678; // basically a larger float
+	unsigned int _unsigned = 2; // positive ints only 
+	char _char = a;
     bool _bool = true;
 
 // Escape Characters
@@ -172,20 +173,22 @@
 
 	// multidimentional array complexity: n*m*k where n, m, and k are array dimensions
 
-	// Binary search: used in a sorted list, starts from the middle 
+	// Linear search: goes through a list, index by index, searching for target
+
+	// *** Binary search: only works in a sorted list, starts from the middle
 	// IMPORTANT 
 	// log (n)
 	const int size = 3;
 	int arr1[size] = { 3, 4, 5 }; 
 	int target = 7; 
 
-	binary_search(arr1, 0, size, target);
+	binary_search(arr1, 0, size, target, arr[size/2]);
 
 	binary_search(int arr[], int left, int right, int target, int mid) {
 		while (left <= right) {
 			mid = left + (right - left) / 2; 
 
-			if (arr[mid] = target) {
+			if (arr[mid] == target) {
 				return mid;
 			}
 
@@ -199,7 +202,7 @@
 		return -1; 
 	}
 
-	// Selection sort: selecting the index and checking minimum, then swapping
+	// *** Selection sort: selecting the index and checking minimum, then swapping
 	// O(n^2)
 	void selectionSort(int a[], int numberUsed) {
 		int indexOfNextSmallest;
@@ -216,7 +219,7 @@
 
 	// Quick sort: 
 
-	// Vectors
+// Vectors
 	// similar to arrays
 #include <vector>
 
@@ -229,3 +232,79 @@
 	for (unsined int i = 0; i < v.size(); i++) {
 
 	}
+
+// C-Strings
+	// was in C
+	// original type
+	// older way of handling strings, before the "string" library was coded
+	// each character in a string is stored in a CHAR array
+	// \0: null character, marks the end of the string
+
+	// str
+
+
+	// delimiter for getline is \n
+
+#include <cctype>
+	// getline reads from cin, until it hits "?", and stores it in string line
+	std::string line; 
+	getline(cin, line, "?");
+
+	// cin gets 1 char and stores it in nextSymbol
+	char nextSymbol;
+	cin.get(nextSymbol);
+
+	// ignores 1000 characters of input until it hit new line \n
+	cin.ignore(1000, '\n');
+
+// Strings
+	// Basically a template
+
+	std::string hello = "Hello";
+	std::string bye("bye");
+
+	// the following string comparison is done in ASCII
+	// Lexical order
+	hello > bye; 
+
+	sizeof(/*variable*/); // returned bytes in memory
+	strlen; // only returns size of string 
+	
+
+// Running C++ on the terminal
+	// g++ [fileName.cpp]
+	// ./[outputName]
+
+// Exception Handling
+	// how to handle bad input 
+	try { // try block
+		// code here
+
+		// can have multiple if statements to check multiple exceptions
+		if (/*something happens here*/) {
+			throw code; // throw 'code' to the catch statement below because something went wrong
+		}
+	}
+	// the order of the catch statements matter. They get checked one-by-one
+	// catch block which is expecting a int parameter that we "throw" from above
+	catch (int e) { // something went wrong with an int
+		// code here
+	}
+	catch (std::string e) { // something went wrong with a string
+		throw something; // it is legal to re-throw insde catch block
+	}
+	catch (...) { // something went wrong in general
+		try {
+			// it is also legal to do another try-catch inside catch block
+		}
+		catch (int e) {
+
+		}
+	} // always start with a specific catch like "int" or "string" and then at the end use general "..."
+
+	// "exception specification" or "throw list"
+	int functionName (int param) throw (DivideByZero, someException); // exceptions DivideByZero and someException, all other invoke unexpected()
+
+	int functionName(int param) throw (); // all exceptions invoke unexpected()
+
+	int functionName(int param); // try catch handles inside function
