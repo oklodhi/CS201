@@ -1,0 +1,5 @@
+﻿  func.cpp
+  main.cpp
+  Generating Code...
+a:\omer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(47): warning C4715: 'GetStartDayNumber': not all control paths return a value
+  Assignment3.vcxproj -> A:\Omer\Documents\Github\CS201\Lecture\Assignments\Assignment3\Debug\Assignment3.exe
