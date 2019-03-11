@@ -7,7 +7,10 @@
 #include <vector>
 
 // 1 month's calendar printed to output stream, with day headers
-void PrintOneMonth(int MonthNumber, int Year, int StartDayNumber, const int DaysInMonth); 
+void PrintOneMonth(int Year, int StartDayNumber, std::vector<int> DaysInMonth);
+
+// Returns name of month 
+std::string GetMonthName(int MonthNumber);
 
 // Returns days in that month & year, allowing for leap year
 int DaysPerMonth(int MonthNumber, int Year); 

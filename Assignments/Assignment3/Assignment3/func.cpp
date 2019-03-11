@@ -1,9 +1,57 @@
 #include "func.h"
 
-// 1 month's calendar printed to output stream, with day headers
-void PrintOneMonth(int MonthNumber, int Year, int StartDayNumber, const int DaysInMonth) {
-	std::cout << "Sun " << "Mon " << "Tue " << "Wed " << "Thu " << "Fri " << "Sat " << std::endl;
+// 1 month's calendar printed to the console 
+void PrintOneMonth(int Year, int StartDayNumber, std::vector<int> DaysInMonth) {
+	
+	int days;
+	int curr = StartDayNumber; 
 
+	for (int i = 0; i < 12; i++) {
+
+		// access total days in current month from the vector
+		days = DaysInMonth.at(i); 
+
+		// Print the current month name and all days of week
+		std::cout << "\n  ------------" << GetMonthName(i) << "--------------\n";
+		std::cout << "  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
+
+		int k;
+		for (k = 0; k < curr; k++) {
+			std::cout << "     ";
+		}
+
+		// prints the dates of the month in their respective spaces
+		for (int j = 1; j <= days; j++) {
+			if (j  < 10) {
+				std::cout << "    " << j;
+			}
+			else if (j > 9) {
+				std::cout << "   " << j;
+			}
+
+			// if at most 7 dates are printed in a week, print on next line
+			if (++k > 6) {
+				k = 0;
+				printf("\n");
+			}
+		}
+
+		if (k) {
+			std::cout << "\n";
+		}
+
+		curr = k;
+	}
+}
+
+// returns the month name based on index passed
+std::string GetMonthName(int MonthNumber) {
+	std::string months[] = { "January", "February", "March",
+					   "April", "May", "June",
+					   "July", "August", "September",
+					   "October", "November", "December" };
+
+	return (months[MonthNumber]);
 }
 
 // Returns days in that month & year, allowing for leap year

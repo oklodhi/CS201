@@ -42,7 +42,7 @@
 
 // Function Overloading (pre and post increment / decrement)
     var++; // uses value then adds 1
-    ++var;  // adds value then add 1
+    ++var;  // adds value then uses var
 
 // Input and output
     // cin, cout, cerr;
