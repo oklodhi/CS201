@@ -308,3 +308,52 @@
 	int functionName(int param) throw (); // all exceptions invoke unexpected()
 
 	int functionName(int param); // try catch handles inside function
+
+
+// Structures
+	// another class type that handles multiple different data
+	struct students {
+		std::string alias; 
+		int age; 
+	};
+
+	students a; 
+	a.alias = "Mo";
+	a.age = 10;
+	a = {"Mo", 10};
+
+	//structures dont have functions
+	//structures are public by default
+	//structures are passed-by-value by default. Use & for pass-by-reference 
+	//structures are created before the main since they dont have member functions
+
+// Classes
+	class students {
+	public:
+		string name;
+		int age();
+	};
+
+	students stu; 
+	// stu is object of the class. aka class instance 
+
+	// classes can have functions
+	// by default: everything is private in a class
+	// variables or attributes are called member funtions or member functions
+
+	// .h: created here
+	// .cpp: defined here
+
+	// Member variables are always private 
+	// Member functions are always public 
+
+// Dot operator
+	// . 
+	// used with variables
+
+// Scope resolution operator
+	// ::
+	// used with class functions
+	// used when we are defining functions
+
+// Encapsulation and abstraction
