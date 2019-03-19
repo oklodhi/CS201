@@ -357,3 +357,17 @@
 	// used when we are defining functions
 
 // Encapsulation and abstraction
+
+// Pointers and Dynamic Arrays
+	int * a; // creates a pointer in the memory
+	// pointer variables are just regular variables that hold the memory address of another variable's value
+	// used a lot in memory management
+
+	// pointer is an address, and address is an integer 
+	
+	// Dynamic variables
+	int *b; // creates a dynamic variable that holds value 10. cannot be deleted unless "delete" is called
+	b = new int(10); 
+	b = 10; 
+
+	new // the new keyword creates a dynamic variable. the pointer only knows of the value of the variable, but not the address 
