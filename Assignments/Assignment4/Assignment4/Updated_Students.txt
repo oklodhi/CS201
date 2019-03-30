@@ -22,7 +22,6 @@
  
 33354  CLARK ROSS
 6 Badminton
- 
  Basketball
  Cooler
  Dodgeball
@@ -38,26 +37,22 @@
 0
 47322  ROSE TUCKER
 6 Locker
- 
  Frisbee
  Kickball
  Racquetball
  Scoreboard
  
 51162  CLYDE PITTMAN
-7 
- Locker
+7 Locker
  Scoreboard
  Cooler
- 
  Badminton
  Racquetball
  
 55094  WILFRED WHEELER
 0
 95017  SUE LEONARD
-2 
- Towel
+2 Towel
  
 15359  MARVIN PHILLIPS
 1 Towel

@@ -180,7 +180,9 @@ std::ostream& operator<<(std::ostream& out, Students& _stu) {
 		out << _stu.CheckoutCount() << " ";
 
 		for (unsigned int i = 0; i < _stu.size_or_items; i++) {
-			out << _stu.arr[i] << "\n ";
+			if (!(_stu.arr[i] == "")) {
+				out << _stu.arr[i] << "\n ";
+			}
 		}
 		out << std::endl;
 		return out;
