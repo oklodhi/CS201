@@ -1,5 +1,2 @@
 ﻿  main.cpp
-  Student.cpp
-a:\omer\documents\github\cs201\lecture\assignments\assignment4\assignment4\student.cpp(158): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
   Assignment4.vcxproj -> A:\Omer\Documents\Github\CS201\Lecture\Assignments\Assignment4\x64\Debug\Assignment4.exe

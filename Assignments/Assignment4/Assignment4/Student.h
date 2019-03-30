@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 
 class Students {
 	// all private member variables
@@ -11,7 +12,9 @@ private:
  	unsigned int id_number; // id number of student
 	unsigned int size_or_items; // total number of items a student checks out
 	unsigned int maxSize; // temporary size of dynamic array
-	std::string *str_ptr; // dynamic array pointer
+
+	typedef std::string* str_ptr; // dynamic array pointer
+	str_ptr arr; 
 
 	// all public member functions 
 public: 
@@ -46,7 +49,7 @@ public:
 	bool HasCheckedOut(const std::string& _item);
 
 	// resize the dynamic array
-	std::string* resize();
+	void resize();
 	// clear student checkin / checkout data
 	void clear();
 

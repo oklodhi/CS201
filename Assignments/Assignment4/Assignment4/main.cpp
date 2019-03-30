@@ -16,6 +16,8 @@ int main() {
 	// input stream object and const file name
 	std::ifstream fin;
 	const std::string STUDENT_FILE = "students.txt"; 
+	const std::string CHECKOUT_FILE = "checkouts.txt";
+	const std::string CHECKIN_FILE = "checkins.txt";
 	
 	// try to open file. if error occurs, catch file name
 	try {
@@ -39,7 +41,7 @@ int main() {
 	}
 
 	for (int i = 0; i < num_stu; i++) {
-		std::cout << arr[i]; 
+		//std::cout << arr[i]; 
 	}
 	std::cout << "Array created... Checking CHECKOUT stage" << std::endl;
 
@@ -47,30 +49,61 @@ int main() {
 	fin.close();
 
 	// open ItemsCheckedOUT file
-	fin.open("ItemsCheckedOUT.txt"); 
+	fin.open(CHECKOUT_FILE); 
 
 	// temporary variables to store ID and ITEM from file
 	unsigned int id; 
 	std::string item; 
 
-	// peek the next data in file and store into ID or ITEM
-	while (fin.peek()) {
+	// while there is data in file, read and store into ID or ITEM
+	while (!fin.eof()) {
 		fin >> id >> item; 
-		std::cout << id << " " << item;
 
 		// iterate through all students and checkout items accordingly
 		for (int i = 0; i < num_stu; i++) {
 			if (arr[i].GetIdNumber() == id) {
 				arr[i] += item;
-	
 				std::cout << item << " was added to " << arr[i].GetIdNumber() << std::endl;
 				break;
 			}
 		}
 	}
 
-
 	for (int i = 0; i < num_stu; i++) {
-		std::cout << arr[i];
+		//std::cout << "TESTING: " << arr[i];
+	}
+
+	fin.close(); 
+
+	std::cout << "Checking CHECKIN stage\n" << std::endl;
+
+	// open ItemsCheckedIN file
+	fin.open(CHECKIN_FILE); 
+
+	// while there is data in file, read and store into ITEM
+	int i = 0;
+	while (!fin.eof()) {
+		fin >> item; 
+
+		//std::cout << "item: " << item << std::endl;
+
+		while (i < num_stu) {
+
+			std::cout << "ITEM: " << item << std::endl;
+			std::cout << "ALL: " << arr[i] << std::endl;
+
+
+
+			if (arr[i].HasCheckedOut(item)) {
+				std::cout << "BEFORE: " << arr[i] << std::endl;
+				arr[i].CheckIn(item);
+				std::cout << "AFTER: " << arr[i] << std::endl;
+				break;
+			}
+			else {
+				i++;
+			}
+		}
+		//i++;
 	}
 }
