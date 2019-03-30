@@ -11,10 +11,12 @@ int main() {
 
 	// create new dynamic array of type STUDENT
 	stu arr = new Students[30];
-	std::cout << "student array created" << std::endl;
+	std::cout << "student array created\n" << std::endl;
 
 	// input stream object and const file name
 	std::ifstream fin;
+	std::ofstream fout; 
+	const std::string UPDATED_STUDENTS_FILE = "Updated_Students.txt";
 	const std::string STUDENT_FILE = "students.txt"; 
 	const std::string CHECKOUT_FILE = "checkouts.txt";
 	const std::string CHECKIN_FILE = "checkins.txt";
@@ -22,7 +24,7 @@ int main() {
 	// try to open file. if error occurs, catch file name
 	try {
 		fin.open(STUDENT_FILE);
-		std::cout << STUDENT_FILE << " stream opened" << std::endl;
+		std::cout << STUDENT_FILE << " stream opened\n" << std::endl;
 
 		if (!fin) {
 			throw STUDENT_FILE;
@@ -40,10 +42,12 @@ int main() {
 		num_stu++;
 	}
 
+	std::cout << "\nArray created" << std::endl;
+
 	for (int i = 0; i < num_stu; i++) {
-		//std::cout << arr[i]; 
+		//std::cout << "TESTING: " << arr[i]; 
 	}
-	std::cout << "Array created... Checking CHECKOUT stage" << std::endl;
+	std::cout << "\nChecking CHECKOUT stage\n" << std::endl;
 
 	// close file
 	fin.close();
@@ -73,9 +77,10 @@ int main() {
 		//std::cout << "TESTING: " << arr[i];
 	}
 
+	// close file
 	fin.close(); 
 
-	std::cout << "Checking CHECKIN stage\n" << std::endl;
+	std::cout << "\nChecking CHECKIN stage" << std::endl;
 
 	// open ItemsCheckedIN file
 	fin.open(CHECKIN_FILE); 
@@ -85,25 +90,46 @@ int main() {
 	while (!fin.eof()) {
 		fin >> item; 
 
-		//std::cout << "item: " << item << std::endl;
-
+		// iterate through all students
 		while (i < num_stu) {
-
-			std::cout << "ITEM: " << item << std::endl;
-			std::cout << "ALL: " << arr[i] << std::endl;
-
-
-
+			// if ITEM matches an item on persons list, then check it back in
 			if (arr[i].HasCheckedOut(item)) {
-				std::cout << "BEFORE: " << arr[i] << std::endl;
 				arr[i].CheckIn(item);
-				std::cout << "AFTER: " << arr[i] << std::endl;
 				break;
 			}
 			else {
+				// if current person doesnt have ITEM then move onto next person
 				i++;
 			}
 		}
-		//i++;
 	}
+
+	// close file
+	fin.close();
+
+	std::cout << "\nChecking OUTPUT stage" << std::endl;
+
+	// try to open output file
+	try {
+		fout.open(UPDATED_STUDENTS_FILE);
+		std::cout << UPDATED_STUDENTS_FILE << " stream opened" << std::endl;
+		// if anything wrong happens while accessing output file, then throw file name
+		if (!fout) {
+			throw UPDATED_STUDENTS_FILE;
+		}
+	}
+	catch (std::string filename) {
+		// catch and handle file name
+		std::cout << "ERROR: " << filename << std::endl;
+	}
+
+	// print updated student data to output file
+	for (int i = 0; i < num_stu; i++) {
+		fout << arr[i];
+	}
+
+	std::cout << "Updated file complete" << std::endl;
+
+	// close file
+	fout.close(); 
 }

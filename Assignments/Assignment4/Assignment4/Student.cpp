@@ -136,7 +136,7 @@ void Students::clear() {
 	delete[] arr;
 	maxSize = 10;
 	size_or_items = 0;
-	std::cout << "CLEARED!" << std::endl;
+	std::cout << "CLEARED!\n" << std::endl;
 }
 
 // >> operator overloading
@@ -176,19 +176,18 @@ std::istream& operator>>(std::istream& in, Students& _stu) {
 // << operator overloading
 std::ostream& operator<<(std::ostream& out, Students& _stu) {
 	if (_stu.CheckoutCount() > 0) {
-		out << _stu.GetIdNumber() << " " << _stu.GetFirstName() << " " << _stu.GetLastName() << "\n";
-		out << _stu.CheckoutCount() << "\n";
+		out << _stu.GetIdNumber() << "  " << _stu.GetFirstName() << " " << _stu.GetLastName() << "\n";
+		out << _stu.CheckoutCount() << " ";
 
 		for (unsigned int i = 0; i < _stu.size_or_items; i++) {
-			out << _stu.arr[i] << " ";
+			out << _stu.arr[i] << "\n ";
 		}
-		out << std::endl << std::endl;
+		out << std::endl;
 		return out;
 	}
 	else if (_stu.CheckoutCount() <= 0) {
-		out << _stu.GetIdNumber() << " " << _stu.GetFirstName() << " " << _stu.GetLastName() << "\n";
+		out << _stu.GetIdNumber() << "  " << _stu.GetFirstName() << " " << _stu.GetLastName() << "\n";
 		out << _stu.CheckoutCount() << "\n";
-		out << std::endl;
 		return out;
 	}
 

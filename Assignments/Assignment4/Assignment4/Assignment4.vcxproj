@@ -133,6 +133,7 @@
     <Text Include="checkins.txt" />
     <Text Include="checkouts.txt" />
     <Text Include="Students.txt" />
+    <Text Include="Updated_Students.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
