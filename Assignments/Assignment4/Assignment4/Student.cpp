@@ -88,16 +88,15 @@ bool Students::CheckOut(const std::string& _item) {
 
 // checkin item
 bool Students::CheckIn(const std::string& _item) {
-	if (HasCheckedOut(_item)) {
 		for (unsigned int i = 0; i < size_or_items; i++) {
 			if (arr[i] == _item) {
-				arr[i] = "";
+				for (int j = i; j <= size_or_items - i; j++) {
+					arr[j] = arr[j + 1];
+				}
 				size_or_items--;
 				return true;
 			}
 		}
-	}
-
 	return false;
 }
 
@@ -179,7 +178,7 @@ std::ostream& operator<<(std::ostream& out, Students& _stu) {
 		out << _stu.GetIdNumber() << "  " << _stu.GetFirstName() << " " << _stu.GetLastName() << "\n";
 		out << _stu.CheckoutCount() << " ";
 
-		for (unsigned int i = 0; i < _stu.size_or_items; i++) {
+		for (unsigned int i = 0; i < _stu.CheckoutCount(); i++) {
 			if (!(_stu.arr[i] == "")) {
 				out << _stu.arr[i] << "\n ";
 			}

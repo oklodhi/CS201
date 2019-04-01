@@ -1,18 +1,15 @@
 82600  LESLIE PEZ
-6 Towel
- Volleyball
- Badminton
+4 Badminton
  Racquetball
  Scoreboard
  Tent
  
 60772  TAMI OWENS
-1 
+0
 51062  MLINDA GOON
 0
 58517  JIMMY BLAKE
-2 Locker
- Dodgeball
+1 Dodgeball
  
 19232  JESSIE SIMON
 1 Locker
@@ -21,10 +18,8 @@
 1 iPhoneCuzWhyNot
  
 33354  CLARK ROSS
-6 Badminton
- Towel
+4 Badminton
  Basketball
- Cooler
  Dodgeball
  Frisbee
  
@@ -37,8 +32,7 @@
 53124  BRAD ESTRADA
 0
 47322  ROSE TUCKER
-7 Locker
- Towel
+6 Locker
  Frisbee
  Kickball
  Racquetball
@@ -46,15 +40,14 @@
  Cooler
  
 51162  CLYDE PITTMAN
-9 Towel
+8 Towel
  Locker
  Scoreboard
  Cooler
- Goggles
  Badminton
  Racquetball
+ Racquetball
  Tent
- Volleyball
  
 55094  WILFRED WHEELER
 0

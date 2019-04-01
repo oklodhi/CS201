@@ -91,14 +91,17 @@ int main() {
 		fin >> item; 
 
 		// iterate through all students and check in items
+		i = 0;
 		while (i < num_stu) {
 			if (arr[i].HasCheckedOut(item)) {
 				arr[i].CheckIn(item);
 				std::cout << item << " was removed from " << arr[i].GetIdNumber() << std::endl;
+				break;
 			}
-			break;
+			else {
+				i++; 
+			}
 		}
-		i++;
 	}
 
 	for (int i = 0; i < num_stu; i++) {
