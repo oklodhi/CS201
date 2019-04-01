@@ -74,7 +74,7 @@ int main() {
 	}
 
 	for (int i = 0; i < num_stu; i++) {
-		//std::cout << "TESTING: " << arr[i];
+		std::cout << "\nTESTING1: " << arr[i];
 	}
 
 	// close file
@@ -90,18 +90,19 @@ int main() {
 	while (!fin.eof()) {
 		fin >> item; 
 
-		// iterate through all students
+		// iterate through all students and check in items
 		while (i < num_stu) {
-			// if ITEM matches an item on persons list, then check it back in
 			if (arr[i].HasCheckedOut(item)) {
 				arr[i].CheckIn(item);
-				break;
+				std::cout << item << " was removed from " << arr[i].GetIdNumber() << std::endl;
 			}
-			else {
-				// if current person doesnt have ITEM then move onto next person
-				i++;
-			}
+			break;
 		}
+		i++;
+	}
+
+	for (int i = 0; i < num_stu; i++) {
+		std::cout << "\nTESTING2: " << arr[i];
 	}
 
 	// close file

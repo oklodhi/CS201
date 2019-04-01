@@ -7,7 +7,7 @@
  Tent
  
 60772  TAMI OWENS
-0
+1 
 51062  MLINDA GOON
 0
 58517  JIMMY BLAKE
@@ -22,6 +22,7 @@
  
 33354  CLARK ROSS
 6 Badminton
+ Towel
  Basketball
  Cooler
  Dodgeball
@@ -36,23 +37,33 @@
 53124  BRAD ESTRADA
 0
 47322  ROSE TUCKER
-6 Locker
+7 Locker
+ Towel
  Frisbee
  Kickball
  Racquetball
  Scoreboard
+ Cooler
  
 51162  CLYDE PITTMAN
-7 Locker
+9 Towel
+ Locker
  Scoreboard
  Cooler
+ Goggles
  Badminton
  Racquetball
+ Tent
+ Volleyball
  
 55094  WILFRED WHEELER
 0
 95017  SUE LEONARD
-2 Towel
+5 Volleyball
+ Towel
+ Locker
+ Cooler
+ Goggles
  
 15359  MARVIN PHILLIPS
 1 Towel
