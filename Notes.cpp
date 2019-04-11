@@ -371,3 +371,10 @@
 	b = 10; 
 
 	new // the new keyword creates a dynamic variable. the pointer only knows of the value of the variable, but not the address 
+
+// Constructors and destructors
+	// big 3 for pointers: assignment, copy constructor, destructor
+
+// Polymorphism
+	virtual
+	// downcasting, upcasting
