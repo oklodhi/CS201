@@ -21,12 +21,6 @@
     <ClCompile Include="Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Func.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Func.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Student.h">
@@ -37,5 +31,6 @@
     <Text Include="checkins.txt" />
     <Text Include="checkouts.txt" />
     <Text Include="Students.txt" />
+    <Text Include="Updated_Students.txt" />
   </ItemGroup>
 </Project>
