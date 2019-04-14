@@ -2,8 +2,6 @@
   OfficeSupplies.cpp
   Products.cpp
   Register.cpp
-a:\omer\documents\github\cs201\lecture\assignments\assignment5\assignment5\register.cpp(31): error C2280: 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream(const std::basic_ostream<char,std::char_traits<char>> &)': attempting to reference a deleted function
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\ostream(83): note: see declaration of 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\ostream(83): note: 'std::basic_ostream<char,std::char_traits<char>>::basic_ostream(const std::basic_ostream<char,std::char_traits<char>> &)': function was explicitly deleted
   Shirt.cpp
   Generating Code...
+  Assignment5.vcxproj -> A:\Omer\Documents\Github\CS201\Lecture\Assignments\Assignment5\x64\Debug\Assignment5.exe

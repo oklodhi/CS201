@@ -19,6 +19,6 @@ public:
 	void setSize(std::string _size);
 
 	// overridden virtual functions
-	void print(std::ostream _os) override; 
+	void print(std::ostream& _os) override; 
 	double calculateTotal() override;
 };

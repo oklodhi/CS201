@@ -18,5 +18,5 @@ public:
 	void setCount(int _count);
 
 	// overridden virtual functions
-	void print(std::ostream _os) override;
+	void print(std::ostream& _os) override;
 };

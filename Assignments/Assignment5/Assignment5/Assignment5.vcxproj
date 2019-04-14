@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="products.txt" />
+    <Text Include="receipt.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OfficeSupplies.h" />

@@ -19,5 +19,5 @@ public:
 
 	// member functions
 	void addProduct(Product* _ptr);
-	void printReceipt(std::ostream _os);
+	void printReceipt(std::ostream& _os);
 };

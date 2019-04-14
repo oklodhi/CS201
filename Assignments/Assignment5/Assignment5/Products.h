@@ -22,6 +22,6 @@ public:
 	void setDescription(std::string _description);
 
 	// virtual functions
-	virtual void print(std::ostream _os);
+	virtual void print(std::ostream& _os);
 	virtual double calculateTotal();
 };

@@ -15,7 +15,7 @@ void Shirt::setSize(std::string _size) {
 	size = _size;
 }
 
-void Shirt::print(std::ostream _os) {
+void Shirt::print(std::ostream& _os) {
 	_os << std::setw(3) << std::right << quantity << " ";
 	_os << std::setw(28) << std::left << size + " " + description; 
 	_os << "$" << std::setw(7) << std::right << calculateTotal() << std::endl;

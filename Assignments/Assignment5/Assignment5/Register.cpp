@@ -9,7 +9,7 @@ void Register::addProduct(Product* _ptr) {
 	numProducts++;
 }
 
-void Register::printReceipt(std::ostream _os) {
+void Register::printReceipt(std::ostream& _os) {
 	_os.setf(std::ios::fixed);
 	_os.setf(std::ios::showpoint);
 	_os.precision(2);
@@ -19,7 +19,7 @@ void Register::printReceipt(std::ostream _os) {
 
 	// heading
 	_os << "****************************************\n";
-	_os << "*   CS 201 Super Selling Stuff Store   *\n";
+	_os << "*            UMKC BOOKSTORE            *\n";
 	_os << "****************************************\n";
 	_os << std::endl;
 	_os << "Qty Description                 Total   \n";

@@ -1,5 +1,6 @@
 #include "Products.h"
 
+
 Product::Product() {
 	price = 0.0;
 	quantity = 0;
@@ -24,8 +25,9 @@ void Product::setDescription(std::string _description) {
 	description = _description;
 }
 
-void Product::print(std::ostream _os) {
-
+void Product::print(std::ostream& _os) {
+	// blank
+	// will be overridden based on product type
 }
 
 double Product::calculateTotal() {
