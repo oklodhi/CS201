@@ -116,6 +116,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OfficeSupplies.cpp" />
+    <ClCompile Include="Products.cpp" />
+    <ClCompile Include="Register.cpp" />
+    <ClCompile Include="Shirt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="products.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OfficeSupplies.h" />
+    <ClInclude Include="Products.h" />
+    <ClInclude Include="Register.h" />
+    <ClInclude Include="Shirt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
