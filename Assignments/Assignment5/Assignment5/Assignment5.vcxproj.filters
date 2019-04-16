@@ -35,6 +35,9 @@
     <Text Include="products.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="receipt.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Products.h">
