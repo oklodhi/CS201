@@ -378,3 +378,15 @@
 // Polymorphism
 	virtual
 	// downcasting, upcasting
+
+// Recursion
+	// a function that calls itself is said to be recursive
+
+
+	// stacks for recursion
+		// a stack is a specialized memory structure
+		// stack of paper
+		// FILO
+
+	// stack overflow
+		// memory is finite
