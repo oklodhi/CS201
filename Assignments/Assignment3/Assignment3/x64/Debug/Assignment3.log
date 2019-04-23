@@ -1,13 +1,5 @@
 ﻿  func.cpp
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(8): error C2065: 'days': undeclared identifier
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(8): error C2065: 'year': undeclared identifier
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(8): error C3861: 'numberOfDays': identifier not found
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(12): error C3861: 'getMonthName': identifier not found
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(11): warning C4473: 'printf' : not enough arguments passed for format string
-  c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(11): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
-  c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(11): note: the missing variadic argument 1 is required by format string '%s'
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(19): error C2065: 'current': undeclared identifier
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(22): error C2065: 'days': undeclared identifier
-c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(36): error C2065: 'current': undeclared identifier
   main.cpp
   Generating Code...
+c:\users\momer\documents\github\cs201\lecture\assignments\assignment3\assignment3\func.cpp(142): warning C4715: 'GetStartDayNumber': not all control paths return a value
+  Assignment3.vcxproj -> C:\Users\momer\Documents\Github\CS201\Lecture\Assignments\Assignment3\x64\Debug\Assignment3.exe
