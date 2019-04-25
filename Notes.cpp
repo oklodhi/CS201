@@ -390,3 +390,24 @@
 
 	// stack overflow
 		// memory is finite
+
+// Data Structures
+	// nodes and linked lists
+		// nodes --> ptrs
+
+		// linked lists
+			// piece of data and a ptr that points to next piece of data
+			// dynamic data structures
+				// node is an example of dynamic variables
+
+			// ListNode a, b;
+			// 
+
+	// linked list applications
+		// stacks, queues, sets, hash tables
+		// friend classes, alternatives
+
+	// iterators
+		// ptrs as iterators
+
+	// trees
