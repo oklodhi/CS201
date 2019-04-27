@@ -2,36 +2,34 @@
 
 // asks for user input on goals and turns
 void starting_question(int& tokens_goal, int& num_turns) {
-	
-	// temp variable to check if cin input is valid
-	bool valid_input = false;
 
-	// makes sure cin input is INT only
+	// this while loop makes sure the tokens_goal input is valid
 	do {
 		std::cout << "Enter the number of tokens you want to reach: " << std::endl;
 		std::cin >> tokens_goal;
 
-		if (!(valid_input = std::cin.good())) {
-			std::cout << "\nInvalid input! Try again... \n"; 
+		if (std::cin.fail()) {
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-	} while (!valid_input);
+		else {
+			break;
+		}
+	} while (true);
 
-	// reset input check flag
-	valid_input = false;
-
-	// makes sure cin input is INT only
+	// this while loop makes sure the tokens_goal input is valid
 	do {
 		std::cout << "What is the number of turns: " << std::endl;
 		std::cin >> num_turns;
 
-		if (!(valid_input = std::cin.good())) {
-			std::cout << "\nInvalid input! Try again... \n";
+		if (std::cin.fail()) {
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-	} while (!valid_input);
+		else {
+			break;
+		}
+	} while (true);
 
 	std::cout << "\nSearching for a solution within " << num_turns << " turn(s) ..." << std::endl;
 }

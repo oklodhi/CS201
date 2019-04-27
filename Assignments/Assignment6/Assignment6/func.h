@@ -1,6 +1,8 @@
 #pragma once
 
 #include <iostream>
+#include <string>
+#include <sstream>
 
 // asks for user input on goals and turns
 void starting_question(int& tokens_goal, int& num_turns);
