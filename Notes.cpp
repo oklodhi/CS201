@@ -373,7 +373,7 @@
 	new // the new keyword creates a dynamic variable. the pointer only knows of the value of the variable, but not the address 
 
 // Constructors and destructors
-	// big 3 for pointers: assignment, copy constructor, destructor
+	// big 3: assignment overloading, copy constructor, destructor
 
 // Polymorphism
 	virtual
@@ -391,6 +391,8 @@
 	// stack overflow
 		// memory is finite
 
+// Templates
+
 // Data Structures
 	// nodes and linked lists
 		// nodes --> ptrs
@@ -406,8 +408,26 @@
 	// linked list applications
 		// stacks, queues, sets, hash tables
 		// friend classes, alternatives
+			// friend functions are functions that have access to all member functions that are private linked
 
 	// iterators
 		// ptrs as iterators
 
 	// trees
+
+// Stacks
+	// first in, last out (stack of paper)
+	// Push and Pop
+	// Stack is built on a linked list
+	
+// Queues
+	// first in, first out (queue at a cashier register)
+	// add and remove
+	// also built on a linked list
+
+// Hash tables
+	// stores and retrieves data from memory
+		// maps an object to a key.
+		// like dictionary in python
+
+	
