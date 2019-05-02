@@ -2,10 +2,34 @@
 
 // asks for user input on goals and turns
 void starting_question(int& tokens_goal, int& num_turns) {
-	std::cout << "Enter the number of tokens you want to reach: " << std::endl;
-	std::cin >> tokens_goal;
-	std::cout << "What is the number of turns: " << std::endl;
-	std::cin >> num_turns;
+
+	// this while loop makes sure the tokens_goal input is valid
+	do {
+		std::cout << "Enter the number of tokens you want to reach: " << std::endl;
+		std::cin >> tokens_goal;
+
+		if (std::cin.fail()) {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else {
+			break;
+		}
+	} while (true);
+
+	// this while loop makes sure the tokens_goal input is valid
+	do {
+		std::cout << "What is the number of turns: " << std::endl;
+		std::cin >> num_turns;
+
+		if (std::cin.fail()) {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else {
+			break;
+		}
+	} while (true);
 
 	std::cout << "\nSearching for a solution within " << num_turns << " turn(s) ..." << std::endl;
 }
@@ -20,24 +44,16 @@ void recursion(int& my_tokens, const int tokens_goal, int& num_turns) {
 	// as long as i have turns left and i havent reached the goal
 	while (num_turns > 0 && my_tokens != tokens_goal) {
 
-		// if my tokens are less than goal then increament
-		if (my_tokens < tokens_goal) {
+		// always divide tokens by 2 if possible
+		if (my_tokens % 2 == 0) {
+			my_tokens = my_tokens / 2;
+
+			std::cout << "Reducing by half, you get " << my_tokens << " tokens." << std::endl;
+		}
+		else { // otherwise increment
 			my_tokens = my_tokens + TOKEN_INCR;
 
 			std::cout << "Adding " << TOKEN_INCR << " , you get " << my_tokens << " tokens." << std::endl;
-		}
-		else if (my_tokens > tokens_goal) {
-			// if my tokens are even then divide in half
-			if (my_tokens % 2 == 0) {
-				my_tokens = my_tokens / 2;
-
-				std::cout << "Reducing by half, you get " << my_tokens << " tokens." << std::endl;
-			}
-			else {
-				my_tokens = my_tokens + TOKEN_INCR;
-
-				std::cout << "Adding " << TOKEN_INCR << " , you get " << my_tokens << " tokens." << std::endl;
-			}
 		}
 
 		// take a turn away each time
@@ -81,7 +97,7 @@ bool play_again() {
 			std::cout << "Thanks for playing!";
 			return false;
 		default:
-			std::cout << "Wrong input" << std::endl;
+			std::cout << "\nWrong input" << std::endl;
 		}
 	}
 }
