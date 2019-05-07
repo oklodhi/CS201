@@ -97,10 +97,13 @@ int main() {
 	int total_ratings;
 
 	// database object db is a const, and initiated from function create_from
-	const database db = create_from(input, FILENAME, total_ratings);
+	database db = create_from(input, FILENAME, total_ratings);
 
 	// print resulting information
 	print_result(db);
+
+	// remove all map entries at the end of the program
+	db.clear(); 
 
 	return 0;
 }
