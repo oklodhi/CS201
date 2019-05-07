@@ -430,4 +430,12 @@
 		// maps an object to a key.
 		// like dictionary in python
 
+// iterators
+	// overloaded operators ++,--,==,!=
+
+// FINAL EXAM: 
+	// recursion
+	// template
+	// polymorphism
+	// linked list or data structures
 	
