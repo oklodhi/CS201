@@ -382,7 +382,6 @@
 // Recursion
 	// a function that calls itself is said to be recursive
 
-
 	// stacks for recursion
 		// a stack is a specialized memory structure
 		// stack of paper
@@ -392,6 +391,12 @@
 		// memory is finite
 
 // Templates
+	// we can create function and class templates if we use the same functionality over and over again
+	// think of it as a generic solution using different data-types
+		
+	template <class t1, class t2 ...>
+	// replace parameter names and variables with t1, t2, ...
+	
 
 // Data Structures
 	// nodes and linked lists
