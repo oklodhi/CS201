@@ -1,0 +1,3 @@
+﻿  lab02main.cpp
+c:\users\momer\documents\github\cs201\lab02\lab02\lab02\lab02main.cpp(29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  lab02.vcxproj -> C:\Users\momer\Documents\Github\CS201\lab02\lab02\Debug\lab02.exe

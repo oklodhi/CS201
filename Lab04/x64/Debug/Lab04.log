@@ -1,0 +1,6 @@
+﻿  checkingmodule.cpp
+c:\users\momer\documents\github\cs201\lab04\lab04\checkingmodule.cpp(66): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\momer\documents\github\cs201\lab04\lab04\checkingmodule.cpp(69): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\momer\documents\github\cs201\lab04\lab04\checkingmodule.cpp(72): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\momer\documents\github\cs201\lab04\lab04\checkingmodule.cpp(34): warning C4715: 'MainMenu': not all control paths return a value
+  Lab04.vcxproj -> C:\Users\momer\Documents\Github\CS201\lab04\x64\Debug\Lab04.exe
